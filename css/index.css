@@ -1,0 +1,31 @@
+/* General
+====================================== */
+:root {
+  /* Colors */
+  --color-1: hsl(217, 19%, 35%);
+  --color-2: hsl(214, 17%, 51%);
+  --color-3: hsl(212, 23%, 69%);
+  --color-4: hsl(210, 46%, 95%);
+  
+  /* Font */
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+
+
+
+
+
+/* Atributon
+====================================== */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+/* Media Queries
+====================================== */
