@@ -7,13 +7,13 @@
 :root {
   /* Colors */
   --color-1: hsl(217, 19%, 35%);
-  --color-2: hsl(214, 17%, 51%);
+  --color-2: hsl(214, 17%, 51%); /* color inicial de share button */
   --color-3: hsl(212, 23%, 69%);
   --color-4: hsl(210, 46%, 95%); /* color de fondo */
   --color-5: hsl(0, 0%, 100%); /* white*/
   
   /* Font */
-  font-family: "Manrope", Arial, Helvetica, sans-serif;
+  font-family: "Manrope", "icomoon", Arial, Helvetica, sans-serif;
   font-size: 13px;
   color: var(--color-1);
 }
@@ -175,6 +175,8 @@ img, figure {
 .article-preview .share-options { padding-top: 16px; }
 
 .article-preview .share-options__button {
+  position: relative;
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -184,13 +186,48 @@ img, figure {
   background-color: var(--color-4);
 }
 
-.article-preview .share-options__icon { transform: translateY(-1px); }
 
+.share-options__button:before {
+  content: "\e902";
+  color: #6e8098;
+}
 
 /* Aricle Preview Component - Share
 ===================================== */
 .article-preview .article-info__share-options {
-  display: none;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  height: 71px;
+  letter-spacing: 5px;
+  color: var(--color-3);
+  background-color: var(--color-1);
+}
+
+.article-preview .article-info__share-options > * { transform: translateY(-4px); }
+
+.article-preview .share-link {
+  margin-left: 15px;
+  margin-bottom: -1px;
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--color-5);
+}
+
+.facebook:before {
+  content: "\e900";
+}
+
+.twitter:before {
+  content: "\e903";
+}
+
+.pinterest:before {
+  content: "\e901";
 }
 
 
