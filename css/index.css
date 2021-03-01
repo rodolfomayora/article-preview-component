@@ -71,6 +71,9 @@ img, figure {
   background-color: var(--color-5);
 }
 
+
+/* Aricle Preview - Image
+===================================== */
 .article-preview .article-image {
   /* padding % represent 200px of height relative to parent tag */
   flex-basis: 39.3%;
@@ -85,6 +88,8 @@ img, figure {
   object-position: 0 24%;
 }
 
+/* Aricle Preview Summary
+===================================== */
 .article-preview .article-info {
   flex-grow: 1;
   display: flex;
@@ -100,6 +105,10 @@ img, figure {
   margin: 0;
   font-weight: 800;
   line-height: 22px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-clamp: 3;
 }
 
 .article-preview .article-info__pararaph {
@@ -107,8 +116,15 @@ img, figure {
   letter-spacing: 0.1px;
   line-height: 19px;
   color: var(--color-2);
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-clamp: 6;
 }
 
+
+/* Aricle Preview - Author
+===================================== */
 .article-preview .article-info__author {
   position: relative;
   flex-basis: 70px;
@@ -139,13 +155,40 @@ img, figure {
 
 .article-preview .author-data {
   flex-grow: 1;
+  min-width: 0;
+  padding-top: 7px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
-.article-preview .share-button {
-  flex-basis: 40px;
-  background-color: red;
+.article-preview .author-name {
+  display: block;
+  font-weight: 800;
+  line-height: 26px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
+.article-preview .publishing-date { color: var(--color-3); }
+
+.article-preview .share-options { padding-top: 16px; }
+
+.article-preview .share-options__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--color-4);
+}
+
+.article-preview .share-options__icon { transform: translateY(-1px); }
+
+
+/* Aricle Preview Component - Share
+===================================== */
 .article-preview .article-info__share-options {
   display: none;
 }
