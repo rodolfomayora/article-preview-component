@@ -5,13 +5,101 @@
   --color-1: hsl(217, 19%, 35%);
   --color-2: hsl(214, 17%, 51%);
   --color-3: hsl(212, 23%, 69%);
-  --color-4: hsl(210, 46%, 95%);
+  --color-4: hsl(210, 46%, 95%); /* color de fondo */
+  --color-5: hsl(0, 0%, 100%); /* white*/
   
   /* Font */
   font-family: "Manrope", Arial, Helvetica, sans-serif;
   font-size: 13px;
 }
 
+.page-body {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+
+  padding-top: 75px;
+
+  min-height: 100vh;
+  background-color: var(--color-2);
+}
+
+img, figure {
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+
+/* Aricle Preview Component
+===================================== */
+.article-preview {
+  width: 100%;
+  max-width: 325px;
+  /* la altura debe ser de 510px */
+   /*max-height: 510px; quitar esto despues de definir los innter elements*/
+
+
+
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--color-5);
+}
+
+.article-preview .article-preview__wrapper {
+  position: relative;
+  padding-top: 157%;
+}
+
+.article-preview .article-preview__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-5);
+}
+
+.article-preview .article-image {
+  /* padding % represent 200px of height relative to parent tag */
+  flex-basis: 39.3%;
+  overflow: hidden;
+  background-color: var(--color-2);
+}
+
+.article-preview .image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0 24%;
+}
+
+.article-preview .article-info {
+  /* 240px height */
+  flex-grow: 1;
+}
+
+
+
+
+
+
+.article-preview .article-info__share-options {
+  /* display: none; */
+}
+
+
+
+
+
+
+
+
+.article-preview .article-info__author {
+  display: none;
+}
 
 
 
@@ -19,6 +107,10 @@
 /* Atributon
 ====================================== */
 .attribution {
+
+  display: none; /* OJOOOOOOO */
+
+
   font-size: 11px;
   text-align: center;
 }
