@@ -251,28 +251,43 @@ a:hover { color: var(--color-2); }
 .pinterest:before { content: "\e901"; }
 
 
-
-
-
-
-
-
-
 /* Atributon
 ====================================== */
 .attribution {
-
-  display: none; /* OJOOOOOOO */
-
-
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 8px;
+  padding-bottom: 4px;
   font-size: 11px;
   text-align: center;
+  color: var(--color-4);
+
+  background-color: var(--color-1);
 }
 
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution a {
+  color: var(--color-3);
+  line-height: 16px;
+}
 
+.attribution a:after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background:
+  url("../images/external-link.svg")
+  scroll
+  no-repeat
+  center / cover;
+}
 
-
+.attribution a:hover {
+  color: var(--color-5);
+}
 
 
 /* Media Queries
