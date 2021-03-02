@@ -1,36 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Article preview component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#48556a" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/fonts.css" />
+  <link rel="stylesheet" href="css/icomoon.css" />
+  <link rel="stylesheet" href="css/index.css" />
 </head>
-<body>
+<body class="page-body">
+  <article class="article-preview">
+    <div class="article-preview__wrapper">
 
-  Shift the overall look and feel by adding these wonderful 
-  touches to furniture in your home
+      <div class="article-preview__content">
+        <figure class="article-image">
+          <img class="article-image__pic" src="images/drawers.jpg" alt="Article Image Preview" />
+        </figure>
+    
+        <div class="article-info">
+          <div class="article-info__summary container">
+            <a href="#"><h3 class="article-info__header">Shift the overall look and feel by adding these wonderful touches to furniture in your home</h3></a>
+            <p class="article-info__pararaph">
+              Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel complete.
+            </p>
+          </div>
+          
+          <div class="article-info__author container">
+            <div class="author-image">
+              <figure class="author-image__wrapper">
+                <img class="author-image__avatar" src="images/avatar-michelle.jpg" alt="Author Avatar" />
+              </figure>
+            </div>
+            <div class="author-data">
+              <a href="#">
+                <span class="author-name">Michelle Appleton</span>
+              </a>
+              <time class="publishing-date" datetime="2020-06-28">28 Jun 2020</time>
+            </div>
+        
+            <div class="share-options">
+              <div class="share-options__button js-button">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  Ever been in a room and felt like something was missing? Perhaps 
-  it felt slightly bare and uninviting. I’ve got some simple tips 
-  to help you make any room feel complete.
-
-  Michelle Appleton
-  28 Jun 2020
-
-  Share
-  
+      <div class="article-info__share-options js-share">
+        <span>SHARE</span>
+        <a
+          class="share-link facebook"
+          href="#"
+          target="_blank"
+          rel="external noopener noreferrer"
+        ></a>
+        <a
+          class="share-link twitter"
+          href="#"
+          target="_blank"
+          rel="external noopener noreferrer"
+        ></a>
+        <a
+          class="share-link pinterest"
+          href="#"
+          target="_blank"
+          rel="external noopener noreferrer"
+        ></a>
+      </div>
+    </div>
+  </article>
+ 
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by
+    <a
+      href="https://www.frontendmentor.io?ref=challenge"
+      target="_blank"
+      rel="external noopener noreferrer"
+    >
+      Frontend Mentor
+    </a>.
+    <br />
+    Coded by
+    <a
+      href="https://rodolfomayora.github.io/mi-portafolio/"
+      target="_blank"
+      rel="external noopener noreferrer"
+    >
+      Rodolfo Mayora Pereda
+    </a>.
   </div>
+
+  <script src="scripts/index.js" defer></script>
 </body>
 </html>
